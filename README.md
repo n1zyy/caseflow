@@ -292,7 +292,7 @@ Allows the feature tests to run locally.
 brew cask install chromedriver
 chromedriver --version
 ```
-
+ 
 **ubuntu**
 ```
 sudo apt-get update
