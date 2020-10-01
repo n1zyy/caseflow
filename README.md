@@ -47,7 +47,7 @@ The Appeals Modernization team's mission is to empower employees with technology
          * [Out of Service](#out-of-service)
          * [Degraded Service](#degraded-service)
       * [Documentation](#documentation)
-
+ 
 ## Caseflow products in heavy development
 
 ### Intake
