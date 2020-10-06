@@ -127,6 +127,7 @@ Rails.application.routes.draw do
       get 'tasks', to: "tasks#for_appeal"
       patch 'update'
       post 'work_mode', to: "work_modes#create"
+      post 'cavc_remand', to: "cavc_remands#create"
     end
   end
   match '/appeals/:appeal_id/edit/:any' => 'appeals#edit', via: [:get]
@@ -245,6 +246,7 @@ Rails.application.routes.draw do
   resources :team_management, only: [:index, :update]
   get '/team_management(*rest)', to: 'team_management#index'
   post '/team_management/judge_team/:user_id', to: 'team_management#create_judge_team'
+  post '/team_management/dvc_team/:user_id', to: 'team_management#create_dvc_team'
   post '/team_management/private_bar', to: 'team_management#create_private_bar'
   post '/team_management/national_vso', to: 'team_management#create_national_vso'
   post '/team_management/field_vso', to: 'team_management#create_field_vso'
