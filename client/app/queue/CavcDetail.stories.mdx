@@ -1,5 +1,4 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import { boolean, text, select } from "@storybook/addon-knobs";
 
 import CavcDetail from "./CavcDetail";
 
@@ -8,7 +7,7 @@ export const argTypes = {
   represented_by_attorney: { control: "boolean" },
   cavc_judge_full_name: { control: "text" },
   cavc_decision_type: { control: { type: "select", options:  ["remand", "straight_reversal", "death_dismissal"] } },
-  remand_subtype: { control: { type: "select", options: ["jmr", "jmpr", "mdr"] } },
+  remand_subtype: { control: { type: "select", options: [null, "jmr", "jmpr", "mdr"] } },
   decision_date: { control: "text" },
   judgement_date: { control: "text" },
   mandate_date: { control: "text" }
@@ -33,8 +32,6 @@ Component which renders details related to CAVC Remand appeals on the case detai
 ### Default View
 
 export const Template = (args) => <CavcDetail {...args} />;
-Template.args = { ...args };
-Template.argTypes = { ...argTypes };
 
 <Preview>
   <Story name="Default">
